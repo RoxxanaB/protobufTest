@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+option java_package = "com.example.tutorial";
+option java_outer_classname = "EmployeeProto";
+
+message Employee {
+   required string firstname = 1;
+   optional string lastname = 2;
+   required int32 id = 3;
+   optional double salary = 4 [default = 100000];
+   repeated Department dept = 5;
+}
+
+message Department {
+   required int32 deptid = 1;
+   required string deptname = 2;
+}
